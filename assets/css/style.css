@@ -1,0 +1,35 @@
+.rpb-container {
+    width: 100%;
+    z-index: 99999;
+    left: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.rpb-fixed {
+    position: fixed;
+}
+
+.rpb-top {
+    top: 0;
+}
+
+.rpb-bottom {
+    bottom: 0;
+}
+
+.rpb-bar {
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+/* Ensure WordPress Admin bar does not clash with top tracking */
+.admin-bar .rpb-top {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .rpb-top {
+        top: 46px;
+    }
+}
